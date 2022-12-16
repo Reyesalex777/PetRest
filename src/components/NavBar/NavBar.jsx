@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service';
 import './NavBar.css'
+import { Button } from 'react-bootstrap';
 
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
@@ -9,25 +10,24 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-    <section>
-    <nav className='navbar'>
-      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
-        data-mdb-target="#navbarToggleExternalContent4"
-        aria-controls="navbarToggleExternalContent4" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul>
-        <li>
-      <Link to="/pets">Pets</Link>
+    <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+      <div className='container-fluid'>
+      <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+        <li className='nav-item'>
+        <Link className='nav-link' style={{fontSize: "3vmin"}} to="/home">🐕</Link>
         </li>
-        <li>
-      <Link to="/pets/add">Add Pet</Link>
+        <li className='nav-item'>
+        <Link className='nav-link' style={{fontSize: "2.5vmin"}} to="/pets">Pets</Link>
+        </li>
+        <li className='nav-item'>
+        <Link className='nav-link' style={{fontSize: "2.5vmin"}} to="/pets/add">Memorialize 🖤</Link>
         </li>
       </ul>
-      <span>Welcome, {user.name}</span>
-      &nbsp;&nbsp;<Link to="" onClick={handleLogOut}>Log Out</Link>
+    </div>
+      <div className='d-flex align-items-center'>
+        <span>Welcome, {user.name}</span>
+        <Button to="" onClick={handleLogOut}>Log Out</Button>
+      </div>
     </nav>
-    </section>
   );
 }
