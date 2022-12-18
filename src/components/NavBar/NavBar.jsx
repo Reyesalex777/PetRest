@@ -14,7 +14,7 @@ export default function NavBar({ user, setUser }) {
       <div className='container-fluid'>
       <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
         <li className='nav-item'>
-        <Link className='nav-link' style={{fontSize: "3vmin"}} to="/home">🐕</Link>
+        <Link className='nav-link' style={{fontSize: "3vmin"}} to="/">🐕</Link>
         </li>
         <li className='nav-item'>
         <Link className='nav-link' style={{fontSize: "2.5vmin"}} to="/pets">Pets</Link>

@@ -21,6 +21,15 @@ app.use(express.static(path.join(__dirname, 'build')));
 // assign the user object from the JWT to req.user
 // app.use(require('./config/checkToken'));
 
+// app.get('/pets', (res, req) => {
+//   const pets = [
+//     {id: 1, name:'charlie', dob: Date, dod: Date },
+//     {id: 2, name:'sara', dob: Date, dod: Date },
+//     {id: 3, name:'ryan', dob: Date, dod: Date }
+//   ];
+//     res.json(pets);
+// });
+
 const port = process.env.PORT || 3001;
 
 // Put API routes here, before the "catch all" route
