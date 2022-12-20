@@ -1,22 +1,39 @@
-import { checkToken } from '../../utilities/users-service';
-
-export default function OrderHistoryPage() {
+// import { checkToken } from '../../utilities/users-service';
+// import { petsAPI } from '../../utilities/pets-api';
+import SinglePet from '../SinglePet/SinglePet';
+export default function PetsPage() {
   // async function handleCheckToken() {
   //   const expDate = await checkToken();
   //   console.log(expDate);
   // }
-  
+
+  const pets = [
+    {pet: 'dude', firstYear:'1990', lastYear:'2001', description:'Good dude'},
+    {pet: 'man', firstYear:'2000', lastYear:'2014', description:'the man'},
+    {pet: 'theDude', firstYear:'2003', lastYear:'2023', description:'bowler'},
+  ];
+
+  const pet = pets.map((p) => <SinglePet pet={p} key={p._id} />);
+
+  // useEffect(function() {
+  //   async function getPets() {
+  //     const pets = await petsAPI.getAll();
+  //     setPets(pets);
+  //   } 
+  //   getPets();
+  // }, []);
+
+
   return (
-    <>
-    {/* This is the page for all pets who are asleep */}
-      <h1>Resting Pets</h1>
-{/* Below this should be tile that display image and name 
-    each tile should be clickable and have detail page with 
-    images(image carrisel is icebox also maybe a change cover image option),
-    dates(which display years pet was),
-    description(this is up to the families descresion).
-    All pets should be displayed in a grid on the home(pets) page.
-*/}
-    </>
+    <ul>
+      <li>{pet}</li>
+    </ul>
   );
 }
+/* This is the page for all pets who are asleep
+Below this should be tile that display image and name 
+each tile should be clickable and have detail page with 
+images(image carrisel is icebox also maybe a change cover image option),
+dates(which display years pet was),
+description(this is up to the families descresion).
+All pets should be displayed in a grid on the home(pets) page. */

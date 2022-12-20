@@ -20,7 +20,7 @@ export default function NavBar({ user, setUser }) {
         <Link className='nav-link' style={{fontSize: "2.5vmin"}} to="/pets">Pets</Link>
         </li>
         <li className='nav-item'>
-        <Link className='nav-link' style={{fontSize: "2.5vmin"}} to="/pets/add">Memorialize 🖤</Link>
+        <Link className='nav-link' style={{fontSize: "2.5vmin"}} to="/pets/add">Memorialize🖤</Link>
         </li>
       </ul>
     </div>

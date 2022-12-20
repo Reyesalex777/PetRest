@@ -2,7 +2,7 @@
 export default function HomePage() {
     return(
         <>
-        <h1 style={{fontSize: "25vmin"}}>HOME</h1>
+        <h1 style={{fontSize: "10vmin"}}>Mission Statement</h1>
         <p>
             I designed this website to help those who have lost what many of us have lost. 
                 Now many of us consider pets to be family, others don't,
