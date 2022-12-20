@@ -4,4 +4,4 @@ import { Route } from "react-router-dom";
 route.get('/', petsCtrl.getAll);
 
 // POST /api/pets
-route.post('/', petsCtrl.create);
+// route.post('/', petsCtrl.create);

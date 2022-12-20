@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const logger = require('morgan');
+const { url } = require('inspector');
 // Always require and configure near the top
 require('dotenv').config();
 // Connect to the database
@@ -44,5 +45,5 @@ app.listen(port, function() {
 });
 
 app.listen(url);
-app.use('build')
+app.use('build');
 app.use('/api/pets', require('./routes/api/pets'));
