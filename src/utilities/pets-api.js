@@ -9,3 +9,7 @@ export function getAll() {
 export function createPet(petFormData) {
     return sendRequest(`${BASE_URL}/new`, 'POST', petFormData)
 }
+
+export function deletePet(id) {
+    return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
+}

@@ -3,6 +3,7 @@ const Pets = require('../../models/pets');
 module.exports = {
     index,
     create,
+    delete: deletePet,
 }
 
 async function index(req, res) {
@@ -18,5 +19,6 @@ async function create(req, res) {
 }
 
 async function deletePet(req, res) {
-    
+    const removedPet = await Pets.findOneAndDelete(req.params.id);
+    res.json(removedPet);
 }

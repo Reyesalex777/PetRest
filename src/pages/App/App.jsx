@@ -27,6 +27,12 @@ export default function App() {
     const pet = await petsAPI.createPet(newPet);
     setPets([...pets, pet])
   }
+
+  async function handleDeletePet(id) {
+    await petsAPI.deletePet(id);
+    const remainingPets = pets.filter((pet) => pet._id !== id);
+    setPets(remainingPets);
+  }
   
 
   return (
@@ -37,7 +43,7 @@ export default function App() {
             <Routes>
               {/* Route components in here */}
               <Route path="/" element={<HomePage />} />
-              <Route path="/pets" element={<PetList pets={pets} setPets={ setPets } />} />
+              <Route path="/pets" element={<PetList pets={pets} setPets={ setPets } handleDeletePet={handleDeletePet} />} />
               <Route path="/pets/new" element={<AddPetPage handleAddPet={handleAddPet} />} />
             </Routes>
             </>
