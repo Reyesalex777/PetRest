@@ -5,7 +5,8 @@ export default function AddPetPage() {
   const [pet, setPet] = useState({
     pet: "",
     firstYear: "",
-    lastYear: ""
+    lastYear: "",
+    description: ""
   })
 
   function addPet(pet) {

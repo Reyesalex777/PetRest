@@ -1,25 +1,12 @@
-// import { checkToken } from '../../utilities/users-service';
-// import { petsAPI } from '../../utilities/pets-api';
 import './PetsPage.css';
-import SinglePet from '../SinglePet/SinglePet';
-import { useState } from 'react';
+import PetList from '../PetList/PetList';
 
-export default function PetsPage() {
-  // async function handleCheckToken() {
-  //   const expDate = await checkToken();
-  //   console.log(expDate);
-  // }
-  const [pets, setPets] = useState([
-    {pet: 'dude', firstYear:'1990', lastYear:'2001', description:'Good dude', id: 1 },
-    {pet: 'dudeman', firstYear:'2000', lastYear:'2011', description:'Bad dude', id: 2 },
-  ]);
-
+export default function PetsPage({ pets, setPets  }) {
   const handleDelete = (id) => {
     const newPets = pets.filter(pet => pet.id !== id)
     setPets(newPets);
   }
 
-  const pet = pets.map((p) => <SinglePet pet={p} key={p.id} />);
 
   // useEffect(function() {
   //   async function getPets() {
@@ -29,9 +16,8 @@ export default function PetsPage() {
   //   getPets();
   // }, []);
 
-
   return (
-   <SinglePet pet={pet} handleDelete={handleDelete} />
+    <PetList pets={pets} name="All Pets" handleDelete={handleDelete} />
   );
 }
 /* This is the page for all pets who are asleep

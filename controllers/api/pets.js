@@ -1,8 +1,18 @@
-import PetsPage from "../../src/pages/PetsPage/PetsPage";
+const Pets = require('../../models/pets');
 
-async function getAll(req, res) {
-    const pets = await pets.find({
-        user: req.user._id  // User Centric CRUD
-    });
+module.exports = {
+    index,
+    create,
+}
+
+async function index(req, res) {
+    const pets = await Pets.find({ user: req.user._id });
     res.json(pets);
+}
+
+async function create(req, res) {
+    const pet = await Pets.create(req.body);
+    pet.user = req.user._id;
+    pet.save();
+    res.json(pet);
 }

@@ -1,7 +1,11 @@
-import { Route } from "react-router-dom";
+const express = require('express');
+const router = express.Router();
+const petsCtrl = require('../../controllers/api/pets');
 
 // GET /api/pets
-route.get('/', petsCtrl.getAll);
-
+router.get('/', petsCtrl.index);
+// Delete /api/pets/{id}  
+router.post('/', petsCtrl.create);
 // POST /api/pets
-// route.post('/', petsCtrl.create);
+
+ module.exports = router;
