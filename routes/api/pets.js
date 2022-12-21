@@ -5,7 +5,7 @@ const petsCtrl = require('../../controllers/api/pets');
 // GET /api/pets
 router.get('/', petsCtrl.index);
 // Delete /api/pets/{id}  
-router.post('/', petsCtrl.create);
+router.post('/new', petsCtrl.create);
 // POST /api/pets
 
  module.exports = router;
