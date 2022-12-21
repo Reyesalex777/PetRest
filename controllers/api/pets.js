@@ -16,3 +16,7 @@ async function create(req, res) {
     pet.save();
     res.json(pet);
 }
+
+async function deletePet(req, res) {
+    
+}

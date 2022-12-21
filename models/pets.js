@@ -8,11 +8,11 @@ const petSchema = new Schema({
         required: true,
     },
     firstYear: {
-        type: Number,
+        type: String,
         required: true,
     },
     lastYear: {
-        type: Number,
+        type: String,
         required: true,
     },
     description: {

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './AddPetPage.css';
+import { useNavigate } from 'react-router-dom';
 export default function AddPetPage({ handleAddPet }) {
 
   const [newpet, setnewPet] = useState({
@@ -8,6 +9,8 @@ export default function AddPetPage({ handleAddPet }) {
     lastYear: "",
     description: ""
   })
+
+  const navigate = useNavigate();
 
   function handleChange(e) {
     setnewPet({...newpet, [e.target.name]: e.target.value });
@@ -22,6 +25,7 @@ export default function AddPetPage({ handleAddPet }) {
       lastYear: "",
       description: ""
     });
+    navigate('/pets');
   }
 
   return (
