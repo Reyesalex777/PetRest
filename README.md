@@ -21,11 +21,11 @@ I designed this website to help memorialize lost pets. Now many of us consider p
 
 </div>
 <details>
-  <summary>:Webpage: Landing page</summary>
+  <summary>:Webpage: Landing(LogIn/SignUp) page</summary>
 
   | Description | Screenshot | 
   |:------------:|-----------| 
-  | <h3>Page</h3> | <img src="https://i.imgur.com/rclPcaT.png" width="700"> |
+  | <h3>Page</h3> | <img src="https://i.imgur.com/u68DfIV.png" width="700"> |
 
 </details>
 <details>
