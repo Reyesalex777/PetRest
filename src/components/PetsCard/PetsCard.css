@@ -20,3 +20,12 @@
   .container {
     padding: 2px 16px;
   }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4vmin;
+    padding: 4vmin;
+  }
