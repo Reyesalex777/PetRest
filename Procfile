@@ -1,0 +1,1 @@
+web: gunicorn PetRest.wsgi
