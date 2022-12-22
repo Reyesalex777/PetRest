@@ -13,7 +13,7 @@ export default function AuthPage({ setUser }) {
       { showSignUp ?
           <SignUpForm setUser={setUser} />
           :
-          <LoginForm setUser={setUser} />
+          <LoginForm setUser={setUser} title="Log In" />
       }
     </main>
   );
