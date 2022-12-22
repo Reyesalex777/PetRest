@@ -13,3 +13,7 @@ export function createPet(petFormData) {
 export function deletePet(id) {
     return sendRequest(`${BASE_URL}/${id}`, 'DELETE');
 }
+
+export function updatePet(id, petData) {
+    return sendRequest(`${BASE_URL}/edit/${id}`, 'PUT', petData)
+}
