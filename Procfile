@@ -1,1 +1,1 @@
-web: gunicorn PetRest.wsgi
+web: node server.js
