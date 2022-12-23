@@ -30,15 +30,19 @@ export default function AddPetPage({ handleAddPet }) {
 
   return (
 // form to add a pet
-  <>
+    <>
     <h1>Add your Pet</h1>
+  <div className='container'>
     <form onSubmit={handleSubmit}>
-      <input className='firstYear' name='firstYear' value={newpet.firstYear} type="text" placeholder="First Year" onChange={handleChange} />
-      <input className='name' name='pet' value={newpet.pet}  type="text" placeholder="Name" onChange={handleChange} required  />
-      <input className='lastYear' name='lastYear' value={newpet.lastYear} type="text" placeholder="Last Year" onChange={handleChange} />
-      <textarea name='description' value={newpet.description} placeholder='Say a few words or your favorite story with them' onChange={handleChange} ></textarea>
-      <button type="submit">Add</button>
+      <div className='addInputs'>
+      <input type="text" name='firstYear' value={newpet.firstYear} placeholder="First Year" onChange={handleChange} />
+      <input type="text" name='pet' value={newpet.pet} placeholder="Name" onChange={handleChange} required  />
+      <input type="text" name='lastYear' value={newpet.lastYear} type="text" placeholder="Last Year" onChange={handleChange} />
+      <textarea className='addtxt' type="text" name='description' value={newpet.description} placeholder='Say a few words or your favorite story with them' onChange={handleChange} ></textarea>
+      <button className='addbtn' type="submit">Add</button>
+      </div>
     </form>
+  </div>
   </>
   );
 }

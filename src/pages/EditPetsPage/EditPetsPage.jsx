@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
+import './EditPetsPage.css';
 
 export default function EditPetsPage({ pets, handleUpdatePet }) {
     const { id } = useParams();
@@ -19,13 +20,17 @@ export default function EditPetsPage({ pets, handleUpdatePet }) {
     return (
         <>
         <h1>Edit</h1>
+        <div className='container'>
         <form onSubmit={handleSubmit} >
-          <input className='firstYear' name='firstYear' value={editPet.firstYear} type="text" placeholder="First Year" onChange={handleChange} />
-          <input className='name' name='pet' value={editPet.pet}  type="text" placeholder="Name" onChange={handleChange} required  />
-          <input className='lastYear' name='lastYear' value={editPet.lastYear} type="text" placeholder="Last Year" onChange={handleChange} />
-          <textarea name='description' value={editPet.description} placeholder='Say a few words or your favorite story with them' onChange={handleChange} ></textarea>
-          <button type="submit">Edit</button>
+          <div className='addInputs'>
+          <input name='firstYear' value={editPet.firstYear} type="text" placeholder="First Year" onChange={handleChange} />
+          <input name='pet' value={editPet.pet}  type="text" placeholder="Name" onChange={handleChange} required  />
+          <input name='lastYear' value={editPet.lastYear} type="text" placeholder="Last Year" onChange={handleChange} />
+          <textarea className='addtxt' name='description' value={editPet.description} placeholder='Say a few words or your favorite story with them' onChange={handleChange} ></textarea>
+          <button className='addbtn' type="submit">Edit</button>
+          </div>
         </form>
+          </div>
       </>
     )
 }
